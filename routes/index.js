@@ -7,16 +7,30 @@ let currentDate = new Date();
 
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
-  res.render('index', {
-    title: 'Express',
-    date: currentDate
+  res.render('content/index', {
+    title: 'Home',
+ 
    });
 });
 
 /* GET about page. */
 router.get('/about', (req, res, next) => {
-  res.render('about', {
+  res.render('index', {
     title: 'About'
+   });
+});
+
+/* GET services page. */
+router.get('/services', (req, res, next) => {
+  res.render('index', {
+    title: 'Services'
+   });
+});
+
+/* GET about page. */
+router.get('/contact', (req, res, next) => {
+  res.render('index', {
+    title: 'Contact'
    });
 });
 
